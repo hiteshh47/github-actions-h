@@ -3,7 +3,7 @@ name: Shell command
 on: [push]
 
 jobs:
-  run-commands:
+  run-commands-linux:
     runs-on: ubuntu-latest
     steps:
       - name: echo string
@@ -13,4 +13,13 @@ jobs:
           node -v
           npm -v
       - name: python commands
-        run: python --version
+        run: |
+          python --version
+          import platform 
+          print(platform.processor())
+  run-commands-windows:
+    runs-on: windows-latest
+    steps:
+      - name: run windows command
+        run: ls 
+        
