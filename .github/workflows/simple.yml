@@ -17,9 +17,9 @@ jobs:
           python --version
           import platform 
           print(platform.processor())
+        shell: python
   run-commands-windows:
     runs-on: windows-latest
     steps:
       - name: run windows command
         run: ls 
-        
