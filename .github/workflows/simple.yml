@@ -24,3 +24,4 @@ jobs:
     steps:
       - name: run windows command
         run: ls 
+        shell: bash
