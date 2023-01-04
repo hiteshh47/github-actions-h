@@ -23,5 +23,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: run windows command
-        run: ls 
+        run: pwd
         shell: bash
