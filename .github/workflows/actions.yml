@@ -1,11 +1,11 @@
 name: Actions workflow 
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   run-actions:
     runs-on: ubuntu-latest
-    steps:
+    steps: 
       - name: Simple JS Actions
         id: greet
         uses: actions/hello-world-javascript-action@v1.1
