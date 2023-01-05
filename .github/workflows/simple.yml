@@ -1,0 +1,27 @@
+name: Shell command
+
+on: [push]
+
+jobs:
+  run-commands-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo string
+        run: echo "hello github"
+      - name: multi commands
+        run: |
+          node -v
+          npm -v
+      - name: python commands
+        run: python --version
+      - name: python program
+        run: |
+          import platform 
+          print(platform.processor())
+        shell: python
+  run-commands-windows:
+    runs-on: windows-latest
+    steps:
+      - name: run windows command
+        run: pwd
+        shell: bash
