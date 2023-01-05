@@ -1,9 +1,13 @@
 name: Actions workflow 
 
 on: 
+  push:
+    branches:
+      - main
+  
   pull_request:
-  schedule:
-    - cron: "0/5 * * * *"
+  # schedule:
+  #  - cron: "0/5 * * * *"
 
 jobs:
   run-actions:
