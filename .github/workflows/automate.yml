@@ -23,3 +23,7 @@ jobs:
           git branch --set-upstream-to=origin/master
           git pull 
           ls -a 
+          echo $RANDOM >> random.txt
+          git add .
+          git commit -m " random number file"
+          git push
