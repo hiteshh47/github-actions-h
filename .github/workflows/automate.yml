@@ -20,3 +20,6 @@ jobs:
           git remote add origin "https://hiteshh47:{{secrets.GITHUB_TOKEN}}@github.com/hiteshh47/github-actions-h.git"
           git fetch
           git checkout master 
+          git branch --set-upsteam-to=origin/master
+          git pull 
+          ls -a 
