@@ -1,0 +1,12 @@
+name: AUTO
+on: [push]
+
+jobs:
+  job-auto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Automate push 
+        run: |
+          pwd
+          ls -a 
+          java --version
