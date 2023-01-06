@@ -11,8 +11,8 @@ jobs:
           ls -a 
           java --version
           git init
-          #git remote add "git@github.com:hiteshh47/github-actions-h.git"
+          #git remote add origin "git@github.com:hiteshh47/github-actions-h.git"
           #Above does not work because the VM at which this command will run
           #does not have SSH keys configured like you do with your local machine
           #hence you will need you use some kind of auth: GITHUB_TOKEN
-          git remote add  "https://hiteshh47:{{secrets.GITHUB_TOKEN}}@github.com/hiteshh47/github-actions-h.git"
+          git remote add origin "https://hiteshh47:{{secrets.GITHUB_TOKEN}}@github.com/hiteshh47/github-actions-h.git"
