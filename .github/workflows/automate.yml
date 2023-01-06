@@ -17,7 +17,7 @@ jobs:
           #does not have SSH keys configured like you do with your local machine
           #hence you will need you use some kind of auth: GITHUB_TOKEN
 
-          git remote add origin "https://hiteshh47:{{secrets.GITHUB_TOKEN}}@github.com/hiteshh47/github-actions-h.git"
+          git remote add origin "https://hiteshh47:${{secrets.GITHUB_TOKEN}}@github.com/hiteshh47/github-actions-h.git"
           git fetch
           git config --global user.email "you@example.com"
           git config --global user.name "Hitesh-bot"
