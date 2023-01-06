@@ -11,4 +11,4 @@ jobs:
           ls -a 
           java --version
           git init
-          git remote add "https://github.com/hiteshh47/github-actions-h.git"
+          git remote add "git@github.com:hiteshh47/github-actions-h.git"
