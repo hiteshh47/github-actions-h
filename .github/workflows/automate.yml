@@ -1,5 +1,5 @@
 name: AUTO
-on: [push]
+on: [pull_request]
 
 jobs:
   job-auto:
@@ -19,8 +19,11 @@ jobs:
 
           git remote add origin "https://hiteshh47:${{secrets.GITHUB_TOKEN}}@github.com/hiteshh47/github-actions-h.git"
           git fetch
+
+          # this is important - does not work without git config
           git config --global user.email "you@example.com"
           git config --global user.name "Hitesh-bot"
+
           git checkout master 
           git branch --set-upstream-to=origin/master
           git pull 
