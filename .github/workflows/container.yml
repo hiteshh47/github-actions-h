@@ -16,8 +16,8 @@ jobs:
       - name: Step with container
         uses: docker://node:19-bullseye-slim 
         with:
-          entrypoint: 'usr/local/bin/node'
-          args: -v
+          entrypoint: '/bin/echo'
+          args: hello
 
 
 
