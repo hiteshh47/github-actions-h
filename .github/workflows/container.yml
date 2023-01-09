@@ -12,7 +12,7 @@ jobs:
         run: |
           node -v
           cat /etc/os-release
-          type -a node
+          
 
       - name: Step with container
         uses: docker://node:18-alpine3.16
