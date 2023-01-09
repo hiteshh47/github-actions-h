@@ -5,7 +5,7 @@ jobs:
   docker-job:
     runs-on: ubuntu-latest
     container: 
-      image: node:18-alpine3.16
+      image: node:19-bullseye-slim 
 
     steps:
       - name: Log node version
@@ -15,10 +15,10 @@ jobs:
           type -a node
 
       - name: Step with container
-        uses: docker://node:19-bullseye-slim 
+        uses: docker://node:18-alpine3.16
         with:
-          entrypoint: '/bin/echo'
-          args: hello
+          entrypoint: '/usr/local/bin/node'
+          args: -v
 
 
 
